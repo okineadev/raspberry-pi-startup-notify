@@ -1,0 +1,13 @@
+[Unit]
+Description=Startup Message Service
+After=network-online.target
+
+[Service]
+User=<username>
+ExecStart=/home/<username>/raspberry-pi-startup-notify/notify-about-startup.sh
+Restart=on-failure
+RestartSec=5
+Type=simple
+
+[Install]
+WantedBy=multi-user.target
